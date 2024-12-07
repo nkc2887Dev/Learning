@@ -7,6 +7,13 @@
 
 ## DOC :: MONGODB
 
+- https://mongoosejs.com/docs/index.html
+- https://www.geeksforgeeks.org/mongodb-interview-questions/
+
 ## DOC :: NODE
 
 ## DOC :: REACT
+
+- https://react.dev/learn
+- https://react.dev/reference/react
+- https://github.com/sudheerj/reactjs-interview-questions
