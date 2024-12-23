@@ -17,3 +17,8 @@
 - https://react.dev/learn
 - https://react.dev/reference/react
 - https://github.com/sudheerj/reactjs-interview-questions
+
+
+## DOC :: REDUX-TOOLKIT
+
+- https://redux-toolkit.js.org/tutorials/quick-start
