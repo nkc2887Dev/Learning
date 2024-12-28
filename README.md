@@ -1,24 +1,27 @@
-# Learning :: MERN Questions/Informations
+# MERN Learning Resources
 
-## DOC :: EXPRESS
+A curated list of useful documentation and interview preparation materials for MERN stack development.
 
-- https://expressjs.com/en/5x/api.html
-- https://github.com/Devinterview-io/express-interview-questions
+## Documentation
 
-## DOC :: MONGODB
+### Express.js
+- [Official API Documentation (5.x)](https://expressjs.com/en/5x/api.html)
+- [Express.js Interview Questions](https://github.com/Devinterview-io/express-interview-questions)
 
-- https://mongoosejs.com/docs/index.html
-- https://www.geeksforgeeks.org/mongodb-interview-questions/
+### MongoDB
+- [Mongoose Documentation](https://mongoosejs.com/docs/index.html)
+- [MongoDB Interview Questions](https://www.geeksforgeeks.org/mongodb-interview-questions/)
 
-## DOC :: NODE
+### Node.js
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/)
 
-## DOC :: REACT
+### React.js
+- [React Official Learning Guide](https://react.dev/learn)
+- [React API Reference](https://react.dev/reference/react)
+- [React Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
 
-- https://react.dev/learn
-- https://react.dev/reference/react
-- https://github.com/sudheerj/reactjs-interview-questions
+#### Redux Toolkit
+- [Redux Toolkit Quick Start Tutorial](https://redux-toolkit.js.org/tutorials/quick-start)
 
-
-## DOC :: REDUX-TOOLKIT
-
-- https://redux-toolkit.js.org/tutorials/quick-start
+#### React Hook Form
+- [React Hook Form Quick Start Guide](https://react-hook-form.com/get-started)
