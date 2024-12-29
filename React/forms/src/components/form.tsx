@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Assets/Form.css";
 
 interface Idata {
   name: string;
@@ -17,10 +18,10 @@ const Form: React.FC = () => {
     setEmail("");
   };
   return (
-    <>
+    <div className="form-container">
       <h4>Normal Form</h4>
-      <form action="submit">
-        <div>
+      <form action="submit" className="form">
+        <div className="form-group">
           <label htmlFor="name">Name : </label>
           <input
             type="text"
@@ -30,7 +31,7 @@ const Form: React.FC = () => {
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email : </label>
           <input
             type="email"
@@ -41,12 +42,16 @@ const Form: React.FC = () => {
           />
         </div>
         <br />
-        <button type="submit" onClick={(e) => handleSubmit(e)}>
-          Submit with normal form
+        <button
+          type="submit"
+          className="submit-button"
+          onClick={(e) => handleSubmit(e)}
+        >
+          Submit
         </button>
       </form>
       <br />
-      <div>
+      <div className="table-container">
         <table border={1} cellPadding={10}>
           <thead>
             <tr>
@@ -68,7 +73,7 @@ const Form: React.FC = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 

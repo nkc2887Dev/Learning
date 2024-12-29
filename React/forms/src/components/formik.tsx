@@ -18,8 +18,8 @@ const initialValues = {
 const FormikFork: React.FC = () => {
   const [data, setData] = useState<IFormData[]>([]);
   return (
-    <>
-      <h4>FormikFork</h4>
+    <div className="form-container">
+      <h4>Formik Form</h4>
       <Formik
         initialValues={initialValues}
         validate={(values: IFormData): IFormError => {
@@ -33,8 +33,9 @@ const FormikFork: React.FC = () => {
           }
           return errors;
         }}
-        onSubmit={(values) => {
+        onSubmit={(values, { resetForm }) => {
           setData((prev) => [...prev, values]);
+          resetForm();
         }}
       >
         {({
@@ -46,8 +47,8 @@ const FormikFork: React.FC = () => {
           handleChange,
         }) => {
           return (
-            <form onSubmit={handleSubmit}>
-              <div>
+            <form onSubmit={handleSubmit} className="form">
+              <div className="form-group">
                 <label>Name :</label>
                 <input
                   type="text"
@@ -58,7 +59,7 @@ const FormikFork: React.FC = () => {
                 />
                 {errors.name && touched.name && errors.name}
               </div>
-              <div>
+              <div className="form-group">
                 <label>Email :</label>
                 <input
                   type="email"
@@ -69,7 +70,12 @@ const FormikFork: React.FC = () => {
                 />
                 {errors.email && touched.email && errors.email}
               </div>
-              <button type="submit" disabled={isSubmitting}>
+              <br />
+              <button
+                className="submit-button"
+                type="submit"
+                disabled={isSubmitting}
+              >
                 Submit
               </button>
             </form>
@@ -77,7 +83,7 @@ const FormikFork: React.FC = () => {
         }}
       </Formik>
       <br />
-      <div>
+      <div className="table-container">
         <table border={1} cellPadding={10}>
           <thead>
             <tr>
@@ -99,7 +105,7 @@ const FormikFork: React.FC = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 

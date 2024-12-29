@@ -33,15 +33,15 @@ const HookForm: React.FC = () => {
   };
 
   return (
-    <>
-      <h4>HookForm</h4>
-      <form onSubmit={handleSubmit(onsubmit)}>
-        <div>
+    <div className="form-container">
+      <h4>React Hook Form</h4>
+      <form onSubmit={handleSubmit(onsubmit)} className="form">
+        <div className="form-group">
           <label htmlFor="name">Name: </label>
           <input id="name" {...register("name", { required: true })} />
           {errors.name && <p style={{ color: "red" }}>{errors.name.message}</p>}
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="email">Email: </label>
           <input id="email" {...register("email", { required: true })} />
           {errors.email && (
@@ -52,10 +52,12 @@ const HookForm: React.FC = () => {
         {/* <input type="submit" value="Submit with input" />
         <br />
         <br /> */}
-        <button type="submit">Submit with react-hook-form</button>
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
       </form>
       <br />
-      <div>
+      <div className="table-container">
         <table border={1} cellPadding={10}>
           <thead>
             <tr>
@@ -77,7 +79,7 @@ const HookForm: React.FC = () => {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 };
 
