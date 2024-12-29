@@ -27,7 +27,6 @@ const HookForm: React.FC = () => {
     defaultValues,
     resolver: yupResolver(schema),
   });
-  console.log(errors);
   const onsubmit = (newRecord: Formdata) => {
     setData((prevData) => [...prevData, newRecord]);
     reset();
@@ -78,7 +77,6 @@ const HookForm: React.FC = () => {
           </tbody>
         </table>
       </div>
-      <hr />
     </>
   );
 };
