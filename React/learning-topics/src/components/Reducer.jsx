@@ -46,7 +46,7 @@ function Reducer() {
   return (
     <div className="card">
       <h3>
-        <i>useReducer Example</i>
+        <i>useReducer</i>
       </h3>
       <ul>
         {data.map((item) => (
