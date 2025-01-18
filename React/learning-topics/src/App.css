@@ -97,3 +97,9 @@ button:hover {
 .reset-btn:hover {
   background: #ff3333;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
