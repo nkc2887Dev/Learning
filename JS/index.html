@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Practice</title>
+    <style>
+        /*  */
+    </style>
+</head>
+
+<body>
+    <!--  -->
+    <div>
+        <h1>Hello Sir!</h1>
+        <strong>My Name is Dev</strong>
+        <span id="span"></span>
+        <p><b>This is My Practice Session</b></p>
+        <button>Fetch API</button><br>
+        <span id="demo"></span>
+        <br>
+    </div>
+</body>
+<script>
+    //  ***********Array Method ***********************
+    let fruits = ["Apple", "Banana", "Orange", "Cherry", 56, "Apple"],
+        arr = [23, 1, 2, 6, 9, 45, "555"];
+
+    concat = fruits.concat(arr);
+    concat = [...fruits, ...arr] // Spread Operater
+    //  console.log(concat)
+    json = JSON.stringify(concat)
+    parse = JSON.parse(json)
+    //  join = fruits.split(" ");
+    join = fruits.join(" ");
+
+    index = fruits.indexOf("Orange");
+    array = fruits.indexOf("Apple");
+    array = fruits.lastIndexOf("Apple");
+
+    array = fruits.pop();
+    array = fruits.push("Jamayka");
+    array = fruits.shift();
+    array = fruits.unshift("Jerry");
+    array = fruits.reverse();
+
+    // array = fruits.sort();
+    // array = fruits.toSorted();
+    array = arr.sort((a, b) => { return a - b });
+    array = arr.sort();
+
+    array = fruits.slice(1, 3);
+    //  Slice show new array with selected items (index, index(selected))
+    array = fruits.splice(1, 3);
+    //  Splice that value remove and show new array with remaining items  (index, index(not selected))
+    array = fruits.splice(2, 0, "Rakesh", "Ramesh");
+    //  Splice for add items (index, removeitem, item1, item2);
+    array = fruits.valueOf();
+    array = fruits.toString();
+    //  console.log(array);
+    //  console.log(fruits);
+
+
+    //  **********function****************
+    function Func(name) {
+        alert(`My Name is ${name}`);
+        confirm(`My Name is ${name}`);
+        prompt(`My Name is ${name}`);
+        document.write("My Name is Naresh");
+    }
+    //  Func("Dev");
+
+
+    //  ********Loop*****************
+    let i = 0;
+    for (i = 0; i < 5; i++) {
+        //  console.log(i+1);
+    }
+
+    while (i <= 5) {
+        i++;
+        if (i == 4) {
+            break;
+        }
+        //  console.log(i);
+    }
+
+    while (i <= 5) {
+        i++;
+        if (i % 2 != 0) {
+            continue;
+        }
+        //  console.log(i);
+    }
+
+    do {
+        i++;
+        //  console.log(i)
+    } while (i < 10)
+
+
+    //  ********String Method***************
+    let firstName = "DdeEvd",
+        lastName = "Doe",
+        random = "ghdggegrhegsnbcbnsvf sbfjwhj",
+        Age = "55";
+
+    str = firstName.charAt(1); // index 0 to start
+    str = random.charAt(10);
+    str = firstName.charCodeAt(1);
+    str = firstName.concat(lastName);
+    str = firstName.search("d");
+    str = firstName.indexOf("d");
+    str = firstName.lastIndexOf("d");
+    str = firstName.match("e");
+    str = firstName.replace("e", "X");
+    //  str = firstName.replace("old", "new");
+    //  str = firstName.split("");
+    str = random.slice(20);
+    str = firstName.substr(2);
+    str = firstName.substring(2);
+    str = firstName.toLowerCase();
+    str = firstName.toUpperCase();
+    str = firstName.valueOf();
+    //  console.log(str);
+
+    //  *********Regular Expression**********
+
+    let reg = /dev/;
+    reg = /dev/gi;
+    //  console.log(reg);
+    //  console.log(reg.source);
+
+    str = " Hello dev Im from Dev Microsoft dev";
+
+    let result = reg.exec(str);
+    //  console.log(result);
+    //  result = reg.exec(str); 
+    //  console.log(result);
+    //  result = reg.exec(str);
+    //  console.log(result);
+    result = reg.test(str); // true/false
+    result = str.match(reg); // array
+    result = str.search(reg); // 1st reg index
+    result = str.replace(reg, "Naresh");
+    //  console.log(result);
+
+    //  ****MetaCharactor
+    reg = /dev/;
+    reg = /^de/gi; // starting
+    reg = /dev$/gi; // ending
+    reg = /d.v/gi; // 1 char
+    reg = /d*v/gi;// multiple char
+    reg = /d\*v/gi; // * as a char
+    reg = /dx?ey?v/gi; // optional
+
+
+    //  ********** Charactor Set
+
+    reg = /d[a-z]v/gi; //  in between a to z
+    reg = /d[az]v/gi;  //  any of them = no
+    reg = /d[aez]v/gi; //  any of them = yes
+    reg = /d[^e]v/gi; //  ^ for notss
+    reg = /d[aej][vscode]/gi; //  any of them = yes
+    reg = /d[aej][vscode]@[0-9]89[89][89]/gi;
+
+
+    //  ********** Quintifier 
+
+    reg = /de{3}v/i;
+    reg = /(dev){3}([0-9][a-z]){3}/i;
+    let string = "Devdevdev0g2f6t is Dev@78999";
+
+    //  ****************shorthand
+
+    reg = /\we6v/i; // single world
+    reg = /\w+e6v/i; //  multiple world
+    reg = /\Wis/i; //  no single world
+    reg = /\W+is/i; //  no multiple world
+
+    reg = /\de6v/i; // single digit
+    reg = /\d+e6v/i; //  multiple digit
+    reg = /\Dis/i; //  no single digit
+    reg = /\D+is/i; //  no multiple digit
+
+    reg = /\sdev/i; // single white space
+    reg = /\s+e6v/i; //  multiple white space
+    reg = /\Sis/i; //  no single white space
+    reg = /\S+is/i; //  no multiple white space
+
+    string = "Ddfgds4e6vdevdev0g2f6t %%%%1njnnis dev Dev@78999";
+
+    reg = /4\b/ //  boundry
+
+    reg = /d(?=f)/ // Assertions 
+    reg = /d(?!e)/ // Assertions
+    result = reg.exec(string);
+    //  console.log(result);
+    if (reg.test(string)) {
+        //  console.log(`Match ${reg.source}`)
+    }
+    else {
+        //  console.log(`notMatch ${reg.source}`)
+
+    }
+
+
+    //  **********Numbers*********
+
+    arr = [1, 5, 6, 8, 98, 5, 65, 78, 15];
+    arr = 56;
+    //  console.log(arr);
+    //  console.log(arr.toString());
+    //  console.log(arr.valueOf());
+
+    //  ************Math Object*****
+
+    let x;
+
+    x = Math;
+    x = Math.E;
+    x = Math.PI;
+    x = Math.sqrt(16);
+    x = Math.round(1.6);
+    x = Math.round(1.4);
+    x = Math.ceil(2.3);
+    x = Math.ceil(-2.3);
+    x = Math.floor(2.3);
+    x = Math.floor(-2.3);
+    x = Math.exp(6);
+    x = Math.min(6, 5, 8, 5, 9, 4, 56, 12, 59, 48, 45, 489);
+    x = Math.max(6, 5, 8, 5, 9, 4, 56, 12, 59, 48, 45, 489);
+    x = Math.pow(2, 4);
+    x = Math.abs(2, 4);
+    x = Math.random(); //  0 to 1
+    x = 50 * Math.random();//  0 to 50
+    x = 100 * Math.random();//  0 to 100
+    x = 50 + (100 - 50) * Math.random();//  50 to 100
+    x = 10 + (40 - 10) * Math.random();//  10 to 40
+    x = Math.floor(1000 + (9999 - 1000) * Math.random());
+    max = 9999;
+    min = 1000;
+    x = Math.floor(min + (max - min) * Math.random())
+
+    //  console.log(x);
+
+    //  ************Date Object**********
+    let date = new Date();
+    //  console.log(date);
+
+    date = new Date(2025, 11, 15, 23, 55, 45);
+    //  console.log(date);
+    a = date.getDate();
+
+    a = date.setDate(25);
+    //  console.log(a);
+
+
+    // *********** Window ************
+    a = window;
+    //  a = alert("uuu");
+    //  a = prompt("uuu");
+    //  a = confirm("uuu");
+    a = location;
+    a = location.href;
+    a = window.document;
+    a = window.innerHeight;
+    a = window.innerWidth;
+    a = window.screenX;
+    a = window.toString;
+    a = history;
+    a = history.go(-1); // backward
+    a = history.go(1); //  forward
+    a = length;
+    //  console.log(a)
+
+    //  *****Prototype********
+
+    //  let object = {
+    //      name: "naresh",
+    //      age: 25
+    //  }
+
+    //  function object2(givenName){
+    //      this.name = givenName;
+    //  }
+
+    //   object.prototype.getName = function(){
+    //      return this.name;
+    //   }
+
+    //  object.prototype.setName = function(newName){
+    //      this.name = newName;
+    //  }
+
+    //  obj2 = new object("Dev");
+    //  console.log(obj2);
+
+
+    //  ********Class inherit Super ***************
+
+    class Employee {
+        constructor(name, age, division) {
+            this.name = name,
+                this.age = age,
+                this.division = division;
+        }
+        slogan() {
+            return `My Name is ${this.name}`;
+        }
+    }
+
+    let data = new Employee("Naresh", 25, "A")
+    //  console.log(data);
+    //  console.log(data.slogan());
+
+    class Coder extends Employee {
+        constructor(name, age, division, experience) {
+            super(name, age, division),
+                this.experience = experience;
+        }
+
+        static add(a, b) {
+            return a + b;
+        }
+    }
+
+    //  console.log(Coder.add(12,15));
+    result = new Coder("Naresh", 25, "D", 0);
+    //  console.log(result);
+
+
+    //  ************DOM and DOM manipulation************
+
+    //  Document Object Model
+    //  https:// www.w3schools.com/js/js_htmldom_document.asp
+    let dom = document.createElement("div");
+    dom.innerHTML = "This is a dom";
+    dom.setAttribute("id", "newDIv");
+    document.getElementById("span").appendChild(dom);
+    //  document.removeChild("span");
+    //  document.replaceChild(new,old);
+    //  document.write("Hello");
+    //  document.getElementById(id).onclick = function(){code};
+
+
+    //  ************Clouser************
+
+    function outer(a) {
+        let b = 10;
+        function inner() {
+            let sum = a + b;
+            console.log("The sum of two no. is " + sum)
+        }
+        return inner;
+    }
+
+    let res = outer(10);
+    //  res();
+
+    function outerFunc(a) {
+        let b = 100;
+        function innerFunnc() {
+            let multi = a * b;
+            console.log(multi);
+        }
+        return innerFunnc;
+    }
+    var result551 = outerFunc(25);
+    //  result551();
+
+    //  ************IIFI************
+    //  Immediately Invoked Function Expression
+
+    (function add(a, b) {
+        let sum = a + b;
+        console.log(sum)
+    })
+    //  (1, 2);
+
+    //  ************Asyncronus************
+
+    //  22222******Async/Await****
+
+    async function dev() {
+        //  console.log("inside");
+        const api = await fetch("https:// api.github.com/users");
+        //  console.log("before");
+        const response = await api.json();
+        //  console.log("after");
+        return response;
+    }
+
+    //  console.log("before line");
+    let nk = dev();
+    //  console.log("after line");
+    //  console.log(nk);
+    //  nk.then(data=>console.log(data))
+    //  console.log("last line");
+
+    //  33333******callback****
+
+    let students = [
+        { name: "Dev", sub: "Html" }, { name: "Naresh", sub: "js" }
+    ];
+
+    function enrolstudents(student, callback) {
+        setTimeout(() => {
+            students.push(student);
+            //  console.log("enroll");
+            callback();
+        }, 1000);
+        //  callback();
+    }
+
+    function getstudentslist() {
+        setTimeout(() => {
+            let str555 = "";
+            let span = document.getElementById("span");
+            students.forEach(function (student) {
+                str555 += `<li>${student.name} & ${student.sub}</li>`;
+            })
+            //  console.log("fetch")
+            span.innerHTML = str555;
+        }, 1000);
+    }
+
+    enrolstudents({ name: "sandy", sub: "python" }, getstudentslist)
+
+    //  11111******Promises****
+
+    function stu() {
+        return new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                let error = true;
+                if (error) {
+                    //  console.log("resolve");
+                    resolve()
+                }
+                else {
+                    //  console.log("reject");
+                    reject();
+                }
+            }, 2000);
+        })
+    }
+
+    stu().then(function () {
+        //  console.log("success")
+    }).catch(function () {
+        //  console.log("Failure")
+    });
+
+    // ////////////////////////////
+    function enrolstudents(student) {
+        return new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                let error = false;
+                if (!error) {
+                    //  console.log("enroll");
+                    resolve();
+                }
+                else {
+                    //  console.log("not now");
+                    reject();
+                }
+                students.push(student);
+                //  console.log("enroll")
+            }, 5000);
+        })
+    }
+
+    function getstudentslist() {
+        setTimeout(() => {
+            let str555 = "";
+            let span = document.getElementById("span");
+            students.forEach(function (student) {
+                str555 += `<li>${student.name} & ${student.sub}</li>`;
+            });
+            //  console.log("fetch")
+            span.innerHTML = str555;
+        }, 1000);
+    }
+
+    let new12 = { name: "san", sub: "jhs" };
+    enrolstudents(new12).then(getstudentslist).catch(function (err) {
+        //  console.log("err", err);
+    })
+
+
+    //  ************Fetch API************
+
+    let btn = document.querySelector("button");
+    let content = document.getElementById("demo");
+
+    const getdata = () => {
+        //  console.log("inside");
+        let res = fetch("https:// api.github.com/users").then(response => {
+            return response.json();
+            //  console.log("inside first then");
+        }).then(data => {
+            //  console.log(data);
+            //  console.log("inside second then");
+        })
+    }
+    getdata();
+
+    const postData = () => {
+        //  res = "https:// example.com/profile";
+        data = '{"name":"jk","name2":"dev"}';
+        params = {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: data
+            //  body: JSON.stringify(data);
+        }
+        //  fetch(res,params).then(response=>{
+        //      return response.json();
+        //  }).then(data=>{
+        //      console.log(data);
+        //  })
+    }
+    postData();
+
+
+    //  ************Map/Filter/Reduce************
+
+    let arr512 = [12, 45, 56, 89, 78, 26];
+    //  console.log(arr512);
+
+    let w = arr512.map((value, index) => {
+        //  console.log(value,index);
+        return value + 1;
+    })
+    //  console.log(w)
+
+
+    let y = arr512.filter((value, index) => {
+        //  return value >45;
+        return index > 2;
+    })
+    //  console.log(y);
+
+    let z = arr512.reduce((h1, h2) => {
+        return h1 + h2;
+        // return h1 - h2;
+        // return h1 * h2;
+    })
+    //  console.log(z);
+
+
+    //  ************CALL/APPLY/BIND************
+
+    let oj = {
+        name: "dev",
+        surname: "Bambhaniya",
+        fullname: function (city) {
+            return `${this.name} ${this.surname} are live in ${city} city.`;
+        }
+    }
+    let oj2 = {
+        name: "sandy",
+        surname: "Parmar"
+    }
+    let oj3 = {
+        name: "sandy2",
+        surname: "Parmar2"
+    }
+
+    //  let oag = oj.fullname("rajkot")
+    //   oag = oj.fullname.call(oj2, "Rajpara");
+    //   oag = oj.fullname.call(oj3, "Rajpara");
+    //   oag = oj.fullname.apply(oj3, ["Rajpara"]);
+    //  console.log(oag);
+
+    let c1 = {
+        x: 12,
+        y: 23
+    }
+
+    let c2 = {
+        x: 122,
+        y: 233
+    }
+
+    function func() {
+        console.log(this.x, this.y);
+    }
+    let func1 = func.bind(c1);
+    //  func1();
+    let func2 = func.bind(c2);
+    //  func2();
+
+    //  ************STAR PROJECT************
+
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+            document.write("*&nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>");
+    }
+
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+            document.write(i + "&nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>");
+    }
+
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+            document.write(j + "&nbsp;&nbsp;&nbsp;");
+        }
+        document.write("<br>");
+    }
+
+    //  ************LOOP setTimeout************ 
+
+    for (var o = 0; o <= 3; o++) {
+        setTimeout(() => {
+            console.log(o)
+        }, 1000);
+    }
+
+    for (let o = 0; o <= 3; o++) {
+        setTimeout(() => {
+            console.log(o)
+        }, 1000);
+    }
+
+
+    // for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1);
+// }
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1);
+// }
+console.log('I want pizza'[0]);
+function* generator(i) {
+  yield i*3;
+  yield i * 2;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+console.log(gen.next().value);
+
+
+let number = 0;
+// console.log(number++);
+// console.log(++number);
+// console.log(number);
+
+function getPersonInfo(one, two, three) {
+  console.log(one);
+  console.log(two);
+  console.log(three);
+}
+
+const person = 'Lydia';
+const age = 21;
+
+// getPersonInfo`${person} is ${age} years old`;
+
+// const bird = {
+//   size: 'small',
+// };
+
+// const mouse = {
+//   name: 'Mickey',
+//   small: true,
+// };
+
+// console.log("2", mouse[bird.size])
+// console.log("3", mouse[bird["size"]])
+// console.log("1", mouse.bird.size)
+    
+// function Person(firstName, lastName) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+// }
+
+// const member = new Person('Lydia', 'Hallie');
+// Person.getFullName = function() {
+//   return `${this.firstName} ${this.lastName}`;
+// };
+
+// console.log(Person.getFullName());
+
+
+    
+    // Theory..................................
+    //     When you use var to declare a variable, it is declared globally or functionally scoped, depending on where it's declared. This means that the variable is accessible anywhere within the same function or global scope, including inside the callback function passed to setTimeout. In your example, since var is used to declare the variable o, the callback function for setTimeout will always log the final value of o (which is 4) after a delay of 1 second for each iteration of the loop.
+
+    // On the other hand, when you use let to declare a variable, it is block scoped. This means that the variable is only accessible within the same block of code, which is defined by the curly braces { }. In your second for loop, you're using let to declare the variable o, which means that each iteration of the loop has its own separate variable o with its own separate value. This allows the callback function for setTimeout to log the correct value of o for each iteration of the loop, after a delay of 1 second for each iteration.
+
+    // So, in short, using let to declare a variable in a for loop creates a new variable for each iteration of the loop, while using var creates a single variable that is shared across all iterations of the loop. This can lead to unexpected behavior when using var in certain situations, such as in your setTimeout example, where you may expect each callback function to log a different value of o for each iteration of the loop.
+
+
+    //  ************Ajax************
+    // Ajax stands for Asynchronous JavaScript and XML, and it is a set of web development techniques used to create dynamic web applications that can update content without reloading the entire page. Ajax is commonly used for creating interactive user interfaces, retrieving and displaying data from servers, and making asynchronous requests to web APIs.
+
+    // The core idea behind Ajax is to use JavaScript to make asynchronous requests to a web server in the background, retrieve data in a specific format such as XML, JSON or plain text, and update the content of a web page without requiring a full page reload. This allows for a more seamless user experience, as the page can update in real-time without the user having to manually refresh it.
+
+    // Ajax typically involves making use of the XMLHttpRequest (XHR) object, which is a built-in object in modern web browsers that provides an easy way to make HTTP requests from JavaScript code. With XHR, you can make a request to a web server and handle the response asynchronously, without blocking the user interface or requiring a page reload.
+
+    // Ajax has become an important part of modern web development, and is used extensively in many popular web applications and frameworks such as Google Maps, Facebook, Twitter, and more.
+
+
+    //  ************OOPs************
+    
+    // Object-oriented programming (OOP) is a programming paradigm that is based on the concept of objects, which can contain data and code that can be manipulated by the program. OOP is based on several key concepts, including encapsulation, inheritance, and polymorphism.
+
+    // Encapsulation is the process of hiding data and code inside an object, so that it cannot be accessed directly from outside the object. Encapsulation provides a way to protect the data and code from accidental modification, and also makes it easier to maintain and modify the program over time.
+
+    // Inheritance is the process of creating new classes by inheriting properties and methods from existing classes. Inheritance allows you to reuse code and avoid duplication, which can help to reduce development time and improve code quality.
+
+    // Polymorphism is the ability of objects to take on multiple forms. Polymorphism allows you to write code that can work with objects of different types, without knowing the exact type of object that is being used. This can help to make code more flexible and reusable.
+
+    // Other key concepts in OOP include abstraction, which involves representing complex systems with simplified models, and modularity, which involves breaking down large programs into smaller, more manageable components.
+
+    // Overall, OOP provides a powerful way to write programs that are modular, flexible, and easy to maintain over time. By using the concepts of encapsulation, inheritance, and polymorphism, developers can write code that is more reusable, flexible, and scalable, which can help to reduce development time and improve code quality.
+
+
+
+    //  ************hoisting************
+
+
+    //      =====topic======
+    //  find index
+    //  call,apply,bind Method difference
+    //  in between array delete
+    //  map filter reduce method
+
+    //  call back/promise/Async--Await
+    //  Array,  string method ---
+    //  clouser---
+    //  Encapsulation---
+    //  iife----
+    //  oops---------
+    //  hoistinng-----
+    //  this.----
+    //  Super----
+    //  DOM and DOM manipulation------
+    //     The Document Object Model (DOM) is a programming interface for web documents that allows programs to dynamically access and update the content, structure, and style of an HTML or XML document. The DOM provides a tree-like representation of the document, with each element in the document represented by a node in the tree.
+
+    // DOM manipulation is the process of modifying the content, structure, or style of a web page using JavaScript. With DOM manipulation, you can add, remove, or modify HTML elements, change the text or attributes of existing elements, or modify the styles of elements. DOM manipulation is a key feature of modern web development, and it is used extensively in web applications to create dynamic, interactive user interfaces.
+
+    // Here are some examples of common DOM manipulation techniques:
+
+    //1. Accessing elements:  You can use JavaScript to access elements in the DOM using their IDs, classes, or tag names. For example, you can use document.getElementById('myElement') to get a reference to an element with the ID "myElement".
+
+    //2. Modifying elements:  You can modify the content, attributes, or style of an element using JavaScript. For example, you can use myElement.innerHTML = 'New content' to change the content of an element, or myElement.style.backgroundColor = 'red' to change the background color of an element.
+
+    //3. Creating new elements:  You can create new HTML elements dynamically using JavaScript, and add them to the DOM. For example, you can use var newElement = document.createElement('div') to create a new div element, and myParentElement.appendChild(newElement) to add it to the DOM.
+
+    //4. Removing elements:  You can remove elements from the DOM using JavaScript. For example, you can use myParentElement.removeChild(myChildElement) to remove a child element from its parent.
+
+    // Overall, DOM manipulation is a powerful and flexible way to create dynamic, interactive web pages using JavaScript. With the right techniques and best practices, you can create rich, responsive web applications that provide a seamless user experience.
+</script>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star@*</title>
+    <style>
+        /* Style css */
+    </style>
+</head>
+
+<body>
+    <!-- Body -->
+    <div>
+
+    </div>
+    <script>
+        // 11111111
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+
+        // let n = 5; // row or column count
+        // // defining an empty string
+        // let string = "";
+
+        // for (let i = 0; i < n; i++) { // external loop
+        //     for (let j = 0; j < n; j++) { // internal loop
+        //         string += "*";
+        //     }
+        //     // newline after each row
+        //     string += "\n";
+        // }
+        // // printing the string
+        // console.log(string);
+
+        // 222222222
+        // *  
+        // *  *  
+        // *  *  *  
+        // *  *  *  *  
+        // *  *  *  *  *   
+        // let n = 5;
+        // let string = "";
+        // for (let i = 1; i <= n; i++) {
+        //     for (let j = 0; j < i; j++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+        // 33333333
+        //     *
+        //    **
+        //   ***
+        //  ****
+        // *****
+        // let n = 5;
+        // let string = "";
+        // for (let i = 1; i <= n; i++) {
+        //     // printing spaces
+        //     for (let j = 0; j < n - i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < i; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+        // 44444444444
+        // *****
+        // *   *
+        // *   *
+        // *   *
+        // *****
+        // let n = 5; // row or column count
+        // // defining an empty string
+        // let string = "";
+
+        // for (let i = 0; i < n; i++) { // external loop
+        //     for (let j = 0; j < n; j++) { // internal loop
+        //         if (i === 0 || i === n - 1) {
+        //             string += "*";
+        //         }
+        //         else {
+        //             if (j === 0 || j === n - 1) {
+        //                 string += "*";
+        //             }
+        //             else {
+        //                 string += " ";
+        //             }
+        //         }
+        //     }
+        //     // newline after each row
+        //     string += "\n";
+        // }
+        // // printing the string
+        // console.log(string);
+
+
+        // 555555555
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        // let n = 5;
+        // let string = "";
+        // // External loop
+        // for (let i = 1; i <= n; i++) {
+        //     // printing spaces
+        //     for (let j = 1; j <= n - i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < 2 * i - 1; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+
+        // 6666666666
+        // *********
+        //  *******
+        //   *****
+        //    ***
+        //     *
+        // let n = 5;
+        // let string = "";
+        // // // External loop
+        // for (let i = 0; i < n; i++) {
+        //     // printing spaces
+        //     for (let j = 0; j < i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < 2 * (n - i) - 1; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+
+
+        let n = 5;
+        let str = "";
+        // for (i = 0; i <= n; i++) {
+        //     for (k = 0; k < n - i; k++) {
+        //         str += " "
+        //     }
+        //     for (j = 0; j <= i; j++) {
+        //         str += "*";
+        //     }
+        //     str += "\n";
+        // }
+        // console.log(str)
+
+        // for (i = 0; i < n; i++) {
+        //     for (j = 0; j < n; j++) {
+        //         if (i === 0 || i === n -1) {
+        //             str += "*"
+        //         }
+        //         else {
+        //             if (j === 0 || j === n - 1) {
+        //                 str += "*"
+        //             }
+        //             else {
+        //                 str += " "
+        //             }
+        //         }
+        //     }
+        //     str += "\n"
+        // }
+        // console.log(str)
+
+        for (i = 0; i <= n; i++) {
+            for (j = 0; j <= n-i; j++) {
+                str += " "
+            }
+            for (k = 0; k < 2 *  i - 1; k++) {
+                str += "*"
+            }
+            str += "\n"
+        }
+        console.log(str)
+
+        
+        // var event = require("events");
+        // var emitter = new event.EventEmitter()
+
+        // emitter.on("dev", ()=>{
+        //     console.log("events Fired")
+        // })
+        // emitter.emit("dev")
+    </script>
+</body>
+
+</html>
