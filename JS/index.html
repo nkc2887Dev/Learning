@@ -33,8 +33,8 @@
     //  console.log(concat)
     json = JSON.stringify(concat)
     parse = JSON.parse(json)
-    //  join = fruits.split(" ");
     join = fruits.join(" ");
+    //  join = fruits.split(" ");
 
     index = fruits.indexOf("Orange");
     array = fruits.indexOf("Apple");
@@ -45,18 +45,21 @@
     array = fruits.shift();
     array = fruits.unshift("Jerry");
     array = fruits.reverse();
+    let reversedArray = [];
 
-    // array = fruits.sort();
-    // array = fruits.toSorted();
-    array = arr.sort((a, b) => { return a - b });
+    for (let i = fruits.length - 1; i >= 0; i--) {
+        reversedArray.push(fruits[i]);
+    }
+
+    // console.log(reversedArray);
+    array = fruits.sort();  // Mutates the Original Array
+    array = fruits.toSorted();  // Does NOT Mutate Original Array
+    array = arr.sort((a, b) => a - b);
     array = arr.sort();
 
-    array = fruits.slice(1, 3);
-    //  Slice show new array with selected items (index, index(selected))
-    array = fruits.splice(1, 3);
-    //  Splice that value remove and show new array with remaining items  (index, index(not selected))
-    array = fruits.splice(2, 0, "Rakesh", "Ramesh");
-    //  Splice for add items (index, removeitem, item1, item2);
+    array = fruits.slice(1, 3);  // Does NOT Mutate Original Array //  Slice show new array with selected items (index, index(not selected))
+    array = fruits.splice(2, 3);   // Mutates the Original Array //  Splice that value remove and show new array with remaining items  (index, items(added)))
+    array = fruits.splice(2, 1, "Rakesh", "Ramesh");   // Mutates the Original Array //  Splice for add items (index, removeitem, item1, item2);
     array = fruits.valueOf();
     array = fruits.toString();
     //  console.log(array);
@@ -135,16 +138,8 @@
 
     str = " Hello dev Im from Dev Microsoft dev";
 
-    let result = reg.exec(str);
-    //  console.log(result);
-    //  result = reg.exec(str); 
-    //  console.log(result);
-    //  result = reg.exec(str);
-    //  console.log(result);
+    let result = reg.exec(str); // array with first values
     result = reg.test(str); // true/false
-    result = str.match(reg); // array
-    result = str.search(reg); // 1st reg index
-    result = str.replace(reg, "Naresh");
     //  console.log(result);
 
     //  ****MetaCharactor
@@ -713,7 +708,7 @@ const age = 21;
 
 
     //  ************OOPs************
-    
+    // APICE
     // Object-oriented programming (OOP) is a programming paradigm that is based on the concept of objects, which can contain data and code that can be manipulated by the program. OOP is based on several key concepts, including encapsulation, inheritance, and polymorphism.
 
     // Encapsulation is the process of hiding data and code inside an object, so that it cannot be accessed directly from outside the object. Encapsulation provides a way to protect the data and code from accidental modification, and also makes it easier to maintain and modify the program over time.
