@@ -16,13 +16,12 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log("New client connected");
-
-  // Simulating cricket score updates every 5 seconds
   setInterval(() => {
-    const score = `India: ${Math.floor(Math.random() * 200)}/${Math.floor(Math.random() * 10)}`;
+    const score = `India: ${Math.floor(Math.random() * 200)}/${Math.floor(
+      Math.random() * 10
+    )}`;
     socket.emit("liveScore", score);
-  }, 5000);
-
+  }, 1000);
   socket.on("disconnect", () => {
     console.log("Client disconnected");
   });

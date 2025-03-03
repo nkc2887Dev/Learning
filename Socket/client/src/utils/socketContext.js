@@ -19,10 +19,9 @@ export const SocketProvider = ({ children }) => {
   }, []);
 
   return (
-    <SocketContext.Provider value= {{ score }
-}>
-  { children }
-  </SocketContext.Provider>
+    <SocketContext.Provider value={{ score }}>
+      {children}
+    </SocketContext.Provider>
   );
 };
 

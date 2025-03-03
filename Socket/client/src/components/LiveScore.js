@@ -6,11 +6,7 @@ const LiveScore = () => {
   return (
     <div>
       <h2>Live Cricket Score</h2>
-      {score ? (
-        <p>{score}</p>
-      ) : (
-        <p>Waiting for live updates...</p>
-      )}
+      {score ? <p>{score}</p> : <p>Waiting for live updates...</p>}
     </div>
   );
 };
