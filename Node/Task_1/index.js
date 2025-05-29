@@ -5,7 +5,6 @@ const port = 3000;
 // Simple request queue
 let isProcessing = false;
 const queue = [];
-console.log('queue: ', queue);
 
 // Function to handle queued requests
 const processNext = () => {
@@ -14,23 +13,22 @@ const processNext = () => {
     return;
   }
 
-  isProcessing = true;
   const { res } = queue.shift();
-
-  res.write('wait...');
+  res.write('wait...'); // Already wrote "waiting..." before
   setTimeout(() => {
     res.end('OK!');
     processNext();
-  }, 15000); // 15 seconds
+  }, 15000);
 };
 
 app.get('/', (req, res) => {
   if (isProcessing) {
-    // Queue the request
+    // Immediately respond with "waiting..." for queued request
+    res.write('waiting...\n');
     queue.push({ res });
   } else {
     isProcessing = true;
-    res.write('wait...');
+    res.write('wait...\n');
     setTimeout(() => {
       res.end('OK!');
       processNext();
