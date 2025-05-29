@@ -1,149 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star@*</title>
     <style>
-      /* Style css */
+        /* Style css */
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Body -->
-    <div></div>
+    <div>
+
+    </div>
     <script>
-      const x = 5;
-      let star0 = "";
-      for (let i = 1; i <= x; i++) {
-        for (let j = 1; j <= i; j++) {
-          star0 += "*";
-        }
-        star0 += "\n";
-      }
-      console.log("star0");
-      console.log(star0);
+        // 11111111
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
+        // *  *  *  *  *   
 
-      let star1 = "";
-      for (let i = 1; i <= x; i++) {
-        for (let j = x; j >= i; j--) {
-          star1 += "*";
-        }
-        star1 += "\n";
-      }
+        // let n = 5; // row or column count
+        // // defining an empty string
+        // let string = "";
 
-      console.log("star1");
-      console.log(star1);
+        // for (let i = 0; i < n; i++) { // external loop
+        //     for (let j = 0; j < n; j++) { // internal loop
+        //         string += "*";
+        //     }
+        //     // newline after each row
+        //     string += "\n";
+        // }
+        // // printing the string
+        // console.log(string);
 
-      let star2 = "";
-      for (let i = 1; i <= x; i++) {
-        for (let j = 1; j <= i - 1; j++) {
-          star2 += " ";
-        }
-        for (let k = x; k >= i; k--) {
-          star2 += "*";
-        }
-        star2 += "\n";
-      }
+        // 222222222
+        // *  
+        // *  *  
+        // *  *  *  
+        // *  *  *  *  
+        // *  *  *  *  *   
+        // let n = 5;
+        // let string = "";
+        // for (let i = 1; i <= n; i++) {
+        //     for (let j = 0; j < i; j++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
 
-      console.log("star2");
-      console.log(star2);
+        // 33333333
+        //     *
+        //    **
+        //   ***
+        //  ****
+        // *****
+        // let n = 5;
+        // let string = "";
+        // for (let i = 1; i <= n; i++) {
+        //     // printing spaces
+        //     for (let j = 0; j < n - i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < i; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
 
-      let star3 = "";
-      for (let i = 1; i <= x; i++) {
-        for (let j = 1; j <= x - i; j++) {
-          star3 += " ";
-        }
-        for (let k = 1; k <= i; k++) {
-          star3 += "*";
-        }
-        star3 += "\n";
-      }
+        // 44444444444
+        // *****
+        // *   *
+        // *   *
+        // *   *
+        // *****
+        // let n = 5; // row or column count
+        // // defining an empty string
+        // let string = "";
 
-      console.log("star3");
-      console.log(star3);
+        // for (let i = 0; i < n; i++) { // external loop
+        //     for (let j = 0; j < n; j++) { // internal loop
+        //         if (i === 0 || i === n - 1) {
+        //             string += "*";
+        //         }
+        //         else {
+        //             if (j === 0 || j === n - 1) {
+        //                 string += "*";
+        //             }
+        //             else {
+        //                 string += " ";
+        //             }
+        //         }
+        //     }
+        //     // newline after each row
+        //     string += "\n";
+        // }
+        // // printing the string
+        // console.log(string);
 
-      const start = 1;
-      let star4 = "";
-      //   for(let i=start; i<=x; i++){
-      //       if(i===start || i===x){
-      //           for(let j=start; j<=x; j++){
-      //               star4 += "*"
-      //           }
-      //       } else {
-      //           star4 += "*"
-      //           for(let j=start+1; j<=x-start; j++){
-      //               star4 += " "
-      //           }
-      //           star4 += "*"
-      //       }
-      //       star4 += "\n"
-      //   }
-      for (let i = start; i <= x; i++) {
-        for (let j = start; j <= x; j++) {
-          if (i === start || i === x) {
-            star4 += "*";
-          } else {
-            if (j === start || j === x) {
-              star4 += "*";
-            } else {
-              star4 += " ";
+
+        // 555555555
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        // let n = 5;
+        // let string = "";
+        // // External loop
+        // for (let i = 1; i <= n; i++) {
+        //     // printing spaces
+        //     for (let j = 1; j <= n - i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < 2 * i - 1; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+
+        // 6666666666
+        // *********
+        //  *******
+        //   *****
+        //    ***
+        //     *
+        // let n = 5;
+        // let string = "";
+        // // // External loop
+        // for (let i = 0; i < n; i++) {
+        //     // printing spaces
+        //     for (let j = 0; j < i; j++) {
+        //         string += " ";
+        //     }
+        //     // printing star
+        //     for (let k = 0; k < 2 * (n - i) - 1; k++) {
+        //         string += "*";
+        //     }
+        //     string += "\n";
+        // }
+        // console.log(string);
+
+
+
+        let n = 5;
+        let str = "";
+        // for (i = 0; i <= n; i++) {
+        //     for (k = 0; k < n - i; k++) {
+        //         str += " "
+        //     }
+        //     for (j = 0; j <= i; j++) {
+        //         str += "*";
+        //     }
+        //     str += "\n";
+        // }
+        // console.log(str)
+
+        // for (i = 0; i < n; i++) {
+        //     for (j = 0; j < n; j++) {
+        //         if (i === 0 || i === n -1) {
+        //             str += "*"
+        //         }
+        //         else {
+        //             if (j === 0 || j === n - 1) {
+        //                 str += "*"
+        //             }
+        //             else {
+        //                 str += " "
+        //             }
+        //         }
+        //     }
+        //     str += "\n"
+        // }
+        // console.log(str)
+
+        for (i = 0; i <= n; i++) {
+            for (j = 0; j <= n-i; j++) {
+                str += " "
             }
-          }
+            for (k = 0; k < 2 *  i - 1; k++) {
+                str += "*"
+            }
+            str += "\n"
         }
-        star4 += "\n";
-      }
-      console.log("star4");
-      console.log(star4);
+        console.log(str)
 
-      //     *
-      //    ***
-      //   *****
-      //  *******
-      // *********
-      let star5 = "";
+        
+        // var event = require("events");
+        // var emitter = new event.EventEmitter()
 
-      for (let i = start; i <= x; i++) {
-        for (let k = start; k <= x - i; k++) {
-          star5 += " ";
-        }
-        for (let j = start + 1; j <= 2 * i; j++) {
-          star5 += "*";
-        }
-        star5 += "\n";
-      }
-
-      console.log("star5");
-      console.log(star5);
-
-      // *********
-      //  *******
-      //   *****
-      //    ***
-      //     *
-      let star6 = "";
-      for (let i = start - 1; i < x; i++) {
-        for (let k = start - 1; k < i; k++) {
-          star6 += " ";
-        }
-        for (let j = start - 1; j < 2 * (x - i) - 1; j++) {
-          star6 += "*";
-        }
-        star6 += "\n";
-      }
-
-      console.log("star6");
-      console.log(star6);
-      //   for (i = 0; i <= x; i++) {
-      //     for (j = 0; j <= x - i; j++) {
-      //       star6 += " ";
-      //     }
-      //     for (k = 0; k < 2 * i - 1; k++) {
-      //       star6 += "*";
-      //     }
-      //     star6 += "\n";
-      //   }
+        // emitter.on("dev", ()=>{
+        //     console.log("events Fired")
+        // })
+        // emitter.emit("dev")
     </script>
-  </body>
+</body>
+
 </html>
