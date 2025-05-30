@@ -6,7 +6,7 @@ dotenv.config()
 
 const app = new App()
 const PORT = Number.parseInt(process.env.PORT || "3000", 10)
-const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/assembly-parts"
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/00-Inventory"
 
 // Connect to database and start server
 const startServer = async () => {
