@@ -1,3 +1,5 @@
+import { Response } from "express";
+
 export interface Iresponse {
   flag: boolean;
   msg?: string;
@@ -10,3 +12,16 @@ export interface IApiResponse<T = any> {
   message?: string;
   errors?: string[];
 }
+
+export interface RequiredQuantityMap {
+  [partId: string]: number;
+}
+
+export interface SendResponseParams {
+  res: Response;
+  success: boolean;
+  message?: string;
+  data?: any;
+  statusCode?: number;
+}
+

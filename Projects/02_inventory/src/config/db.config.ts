@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import config from "./processEnv.config";
+import { DB_EVENTS } from "../utils/constants/common";
 
 const connectDB = async (): Promise<void> => {
   try {
@@ -8,15 +9,15 @@ const connectDB = async (): Promise<void> => {
 
     const db = mongoose.connection;
 
-    db.once("open", () => {
+    db.once(DB_EVENTS.OPEN, () => {
       console.log("📡 MongoDB connection is open.");
     });
 
-    db.on("error", (error) => {
+    db.on(DB_EVENTS.OPEN, (error) => {
       console.error("❌ MongoDB error:", error);
     });
 
-    db.on("disconnected", () => {
+    db.on(DB_EVENTS.DISCONNECTED, () => {
       console.warn("⚠️ MongoDB disconnected.");
     });
   } catch (err) {

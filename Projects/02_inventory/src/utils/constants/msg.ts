@@ -8,7 +8,9 @@ const MESSAGE = {
     CREATE: "Inventory created.",
     UPDATE: "Inventory updated.",
   },
-  ERROR: {},
+  ERROR: {
+    VALIDATION: "Validation failed"
+  },
   COMMON: {},
 };
 

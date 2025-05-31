@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import Joi from "joi";
+import { ERROR_CODE } from "../utils/constants/common";
+import MESSAGE from "../utils/constants/msg";
 
 const validate = (validator: Joi.ObjectSchema) => {
   return async (req: Request, res: Response, next: NextFunction) => {
@@ -10,8 +12,8 @@ const validate = (validator: Joi.ObjectSchema) => {
       const details = error.details?.map((err: Joi.ValidationErrorItem) => err.message) || [];
       res.status(422).json({
         success: false,
-        code: "VALIDATION_ERROR",
-        message: "Validation failed",
+        code: ERROR_CODE.VALIDATION_ERROR,
+        message: MESSAGE.ERROR.VALIDATION,
         errors: details,
       });
     }

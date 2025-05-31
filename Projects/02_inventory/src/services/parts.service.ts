@@ -19,10 +19,7 @@ export const createPartService = async (data: IPartInput): Promise<Iresponse> =>
   }
 };
 
-export const setToInventoryService = async (
-  data: any,
-  id: string
-): Promise<Iresponse> => {
+export const setToInventoryService = async ( data: any, id: string ): Promise<Iresponse> => {
   try {
     const part = await PartModel.findById(id);
     if (!part) {

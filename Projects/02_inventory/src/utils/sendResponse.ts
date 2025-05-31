@@ -1,12 +1,4 @@
-import { Response } from "express";
-
-interface SendResponseParams {
-  res: Response;
-  success: boolean;
-  message?: string;
-  data?: any;
-  statusCode?: number;
-}
+import { SendResponseParams } from "../@types";
 
 export const sendResponse = ({
   res,

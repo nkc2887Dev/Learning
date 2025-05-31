@@ -1,15 +1,9 @@
-import type { Request, Response, NextFunction } from "express";
-import {
-  createPartService,
-  setToInventoryService,
-} from "../services/parts.service";
+import type { Request, Response } from "express";
+import { createPartService, setToInventoryService } from "../services/parts.service";
 import { sendResponse } from "../utils/sendResponse";
 import MESSAGE from "../utils/constants/msg";
 
-export const createPartController = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const createPartController = async ( req: Request, res: Response ): Promise<void> => {
   const result = await createPartService(req.body);
   if (!result?.flag) {
     return sendResponse({
@@ -27,10 +21,7 @@ export const createPartController = async (
   });
 };
 
-export const setToInventoryController = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const setToInventoryController = async ( req: Request, res: Response ): Promise<void> => {
   const result = await setToInventoryService(req.body, req.params.id);
   if (!result?.flag) {
     return sendResponse({

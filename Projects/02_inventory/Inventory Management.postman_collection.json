@@ -251,7 +251,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"quantity\": 5\r\n}",
+					"raw": "{\r\n    \"quantity\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -259,7 +259,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:9876/api/part/683aaa45376479bd98059359",
+					"raw": "http://localhost:9876/api/part/683ada6bd01cf6c1d3b4bf1b",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -268,7 +268,7 @@
 					"path": [
 						"api",
 						"part",
-						"683aaa45376479bd98059359"
+						"683ada6bd01cf6c1d3b4bf1b"
 					]
 				}
 			},
