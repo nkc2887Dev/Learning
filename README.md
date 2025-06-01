@@ -28,3 +28,6 @@ A curated list of useful documentation and interview preparation materials for M
 
 #### Formik
 - [Formik Quick Overview](https://formik.org/docs/overview)
+
+#### OOPs
+- [OOPs Chatgpt](// https://chatgpt.com/share/683be138-3b2c-8012-b59f-497208f8f75e)
